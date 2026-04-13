@@ -7,21 +7,31 @@
 ⇝
 html, body {
   height: 100%;
+  font-family: inter, sans-serif;
 }
 
 #left{
   background: #F7F8FC;
-  width: 45%;
+  width: clamp(10rem, 20%, 20rem);
+
+  max-width: 20rem;
   height: 100vh;
+  padding: 2rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .left-top{
-  --size: 0.5rem;
+  --size: clamp(0.5rem, 2vw, 1.1rem);
   display: flex;
   align-self: center;
   justify-content: space-between;
+  width: 100%;
   
-  padding: 0.5rem;
 }
 
 .color{
@@ -41,28 +51,50 @@ html, body {
   background-color: #7CD41D;
 }
 
+.red:hover , .green:hover , .yellow:hover {
+ cursor: pointer;
+ filter: brightness(0.9);
+}
+
 .menu{
-  height: calc(var(--size) - 0rem);
+  height: calc(var(--size) + 0.2rem);
+}
+
+.menu:hover{
+  cursor: pointer;
+  
 }
 
 /* middle */
 .left-middle{
   display: flex;
-  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  /* background-color: aqua; */
 }
 
 
 /*  ---navigation---   */
 
 .first-nav{
-  --logos: 0.8rem;
+  --logos: clamp(0.8rem, 2vw, 1.2rem);
   font-size: calc(var(--logos) - 0.1rem);
-  padding-top: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 45rem;
+  /* background-color: #7CD41D; */
+  
 }
 
 .first-nav ul {
 /*  margin-left: 20%; */
-  padding-left: 2rem;
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -70,12 +102,16 @@ html, body {
 
 .first-nav ul li a {
   text-decoration: none;
-  font-weight: 470;
+  font-weight: 500;
 }
 
 .first-nav ul li a:hover {
   text-decoration: none;
+  color: #613CE6;
+  text-shadow: 2px 2px 4px rgba(74, 38, 207, 0.3);
 }
+
+
 
 a, button {
   -webkit-tap-highlight-color: transparent;
@@ -88,9 +124,7 @@ a:focus-visible {
   box-shadow: none;
 }
 
-a:focus{
-  color: red;
-}
+
 
 .first-nav ul li {
   display: flex;
@@ -111,11 +145,29 @@ a:focus{
 /* left side bottom part */
 
 #add-task{
-  background: red;
+  background: #613CE6;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 1rem;
+  width: clamp(2rem, 4vw, 3rem);
+  height: clamp(2rem, 4vw, 3rem);
+  border-radius: 30%;
+  border-top-left-radius: 0%;
+  color: white;
+  text-decoration: none;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+#add-task:hover{
+  background: #613CE6;
+  opacity: 0.8;
+  filter: brightness(0.9);
+} 
+
+@media (max-width: 480px){
+    #left{
+      display: none;
+    }
+
 }
