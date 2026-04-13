@@ -4,13 +4,19 @@
   box-sizing: border-box;
   color: black;
 }
+⇝
+html, body {
+  height: 100%;
+}
 
 #left{
   background: #F7F8FC;
+  width: 45%;
+  height: 100vh;
 }
 
-.top{
-  --size: 1rem;
+.left-top{
+  --size: 0.5rem;
   display: flex;
   align-self: center;
   justify-content: space-between;
@@ -39,14 +45,27 @@
   height: calc(var(--size) - 0rem);
 }
 
+/* middle */
+.left-middle{
+  display: flex;
+  gap: 2rem;
+}
+
+
 /*  ---navigation---   */
 
 .first-nav{
-  --logos: 0.9rem;
+  --logos: 0.8rem;
+  font-size: calc(var(--logos) - 0.1rem);
+  padding-top: 1rem;
 }
 
 .first-nav ul {
-  margin-left: 1rem;
+/*  margin-left: 20%; */
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .first-nav ul li a {
@@ -77,24 +96,26 @@ a:focus{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap:0.7rem;
+  gap:0.7em;
 }
+
+
 
 /* ------nav links ka icons----- */
 
-.inbox-logo{
+.inbox-logo, .anytime-logo, .trash-logo,.today-logo, .upcoming-logo, .someday-logo{
   
   height: var(--logos);
 }
 
-.today-logo{
-  height: var(--logos);
-}
+/* left side bottom part */
 
-.upcoming-logo{
-  height: var(--logos);
-}
-
-.someday-logo{
-  height: var(--logos);
+#add-task{
+  background: red;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 1rem;
 }
