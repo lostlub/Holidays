@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+#left{
+  background: #F7F8FC;
+}
+
+.top{
+  --size: 1rem;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  
+  padding: 0.5rem;
+}
+
+.color{
+  height: var(--size);
+  width: var(--size);
+  border: none;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #FB4D47;
+}
+.yellow {
+  background-color: #FCC022;
+}
+.green{
+  background-color: #7CD41D;
+}
+
+.menu{
+  height: calc(var(--size) - 0rem);
+}
+
+/*  ---navigation---   */
+
+.first-nav{
+  --logos: 0.9rem;
+}
+
+.first-nav ul {
+  margin-left: 1rem;
+}
+
+.first-nav ul li a {
+  text-decoration: none;
+  font-weight: 470;
+}
+
+.first-nav ul li a:hover {
+  text-decoration: none;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:active,
+a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+a:focus{
+  color: red;
+}
+
+.first-nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:0.7rem;
+}
+
+/* ------nav links ka icons----- */
+
+.inbox-logo{
+  
+  height: var(--logos);
+}
+
+.today-logo{
+  height: var(--logos);
+}
+
+.upcoming-logo{
+  height: var(--logos);
+}
+
+.someday-logo{
+  height: var(--logos);
+}
