@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute and Relative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Parent Container - Relative Positioning */
+        .parent {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #3498db;
+            margin: 20px 0;
+            border: 2px solid #2c3e50;
+            padding: 20px;
+        }
+
+        .parent h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* Child Elements - Absolute Positioning */
+        .child {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c0392b;
+            font-weight: bold;
+        }
+
+        .child1 {
+            top: 0px;
+            left: 0px;
+        }
+
+        .child2 {
+            top: 20px;
+            right: 20px;
+        }
+
+        .child3 {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .child4 {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  height: 1.5rem;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 0%;
+  right: 0; /* nice alignment */
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: none;
+  z-index: 1000;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.dropdown li:hover {
+  background: #eee;
+}
+
+/* show class */
+.dropdown.show {
+  display: block;
+}
+
+    </style>
+
+    
+</head>
+<body>
+    <h1>Position: Relative & Absolute</h1>
+    
+    <div class="parent">
+        <h2>Parent (Relative)</h2>
+        <div class="child child1">Child 1</div>
+        <div class="child child2">Child 2</div>
+        <div class="child child3">Child 3</div>
+        <div class="child child4">Child 4</div>
+    </div>
+
+    <div class="menu">
+  <button class="menu-btn" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 0 1.5ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 0 1.5Z" />
+    </svg>
+  </button>
+
+  <div id="dropdown" class="dropdown">
+    <ul>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+    function toggleMenu() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
