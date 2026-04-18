@@ -243,9 +243,10 @@
 
     <div class="add-task">
       <form action="" id="add-task-form">
-        <input type="text" placeholder="add a title">
+        <input type="text" placeholder="add a title" required>
         <textarea name="" id="description" cols="30" rows="10" placeholder="add a description"></textarea>
         <select name="category" id="category">
+          <option value="" disabled selected hidden>Category</option>
           <option value="Gym">Gym</option>
           <option value="Work">Work</option>
           <option value="Study">Study</option>
@@ -253,7 +254,9 @@
         </select>
         <input type="text" placeholder="Enter Category" style="display: none;">
         <input type="date" id="date" placeholder="Select a date">
+        <input type="time" id="time">
         <select name="importante" id="importante">
+          <option value="" disabled selected hidden>Important</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
