@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <!-- linking the js -->
-  <script src="base.js" defer></script>
+  <script src="base2.js" defer></script>
 </head>
 
 <body>
@@ -102,7 +102,7 @@
     <div class="left-bottom">
         <button href="#left" id="add-task">+</button>
     </div>
-    
+     
   </section>
   <section id="middle">
     <div class="middle-top">
@@ -111,8 +111,8 @@
       <div class="list">
         <ul>
           
-          <li class="all-1"><span id="all-tasks-active">10</span>All</li>
-          <li class="imp-2">Important</li>
+          <li class="all-1 active"><span id="all-tasks-active">10</span>All</li>
+          <li class="imp-2" >Important</li>
           <li class="comp-3">Completed</li>
           <li class="pend-4">Pending</li>
 
@@ -125,146 +125,40 @@
       <div class="tasks">
         <ul>
           <!-- tasks will be added here dynamically -->
-           <li class="task">
-              <div class="task-top">
-                <div class="task-top-left">
-                  <input type="checkbox" name="completed" id="task1-checkbox"> 
-                  <h6 class="task-title" id="task1">Task 1</h6>
-                </div>
-                <div class="menu-of-task-wrapper">
-                  <button class="btn-of-edit">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 menu-of-task-1">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-                        </svg>
-                  </button>
-
-                  <div id="popover-task1">
-
-                      <ul>
-                          <li><a href="#profile">Edit</a></li>
-                          <li><buttton>Remove</button></li>
-                      </ul>
-
-                  </div>
-
-                </div>
-
-              </div>
-              <p class="description">Description for Task 1. asdfasdf afasdf  asdf asdfa sdf.</p>
-              <p class="time">2:00 - 3:50</p>
-           </li>
-           <li class="task">
-              <div class="task-top">
-                <div class="task-top-left">
-                  <input type="checkbox" name="completed" id="task1-checkbox"> 
-                  <h6 class="task-title" id="task1">Task 1</h6>
-                </div>
-                <div class="menu-of-task-wrapper" popovertarget="popover-task1" popovertargetaction="toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 menu-of-task">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-                        </svg>
-
-
-                  <div popover id="popover-task1">
-
-                      <ul>
-                          <li><a href="#profile">Profile</a></li>
-                          <li><a href="#settings">Settings</a></li>
-                          <li><a href="#logout">Logout</a></li>
-                      </ul>
-
-                  </div>
-
-                </div>
-
-              </div>
-              <p class="description">Description for Task 1. asdfasdf afasdf  asdf asdfa sdf.</p>
-              <p class="time">2:00 - 3:50</p>
-           </li>
-           <li class="task">
-              <div class="task-top">
-                <div class="task-top-left">
-                  <input type="checkbox" name="completed" id="task1-checkbox"> 
-                  <h6 class="task-title" id="task1">Task 1</h6>
-                </div>
-                <div class="menu-of-task-wrapper" popovertarget="popover-task1" popovertargetaction="toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 menu-of-task">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-                        </svg>
-
-
-                  <div popover id="popover-task1">
-
-                      <ul>
-                          <li><a href="#profile">Profile</a></li>
-                          <li><a href="#settings">Settings</a></li>
-                          <li><a href="#logout">Logout</a></li>
-                      </ul>
-
-                  </div>
-
-                </div>
-
-              </div>
-              <p class="description">Description for Task 1. asdfasdf afasdf  asdf asdfa sdf.</p>
-              <p class="time">2:00 - 3:50</p>
-           </li>
-           <li class="task">
-              <div class="task-top">
-                <div class="task-top-left">
-                  <input type="checkbox" name="completed" id="task1-checkbox"> 
-                  <h6 class="task-title" id="task1">Task 1</h6>
-                </div>
-                <div class="menu-of-task-wrapper" popovertarget="popover-task1" popovertargetaction="toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 menu-of-task">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-                        </svg>
-
-
-                  <div popover id="popover-task1">
-
-                      <ul>
-                          <li><a href="#profile">Profile</a></li>
-                          <li><a href="#settings">Settings</a></li>
-                          <li><a href="#logout">Logout</a></li>
-                      </ul>
-
-                  </div>
-
-                </div>
-
-              </div>
-              <p class="description">Description for Task 1. asdfasdf afasdf  asdf asdfa sdf.</p>
-              <p class="time">2:00 - 3:50</p>
-           </li>
+           
+           
+           
         </ul>
       </div>
     </div>
 
     <div class="add-task">
       <form action="" id="add-task-form">
-        <input type="text" placeholder="add a title" required>
-        <textarea name="" id="description" cols="30" rows="10" placeholder="add a description"></textarea>
-        <select name="category" id="category">
+        <input type="text" placeholder="add a title" required id="title">
+        <textarea name="" id="description" cols="30" rows="10" placeholder="add a description" required></textarea>
+        <select name="category" id="category" required>
           <option value="" disabled selected hidden>Category</option>
           <option value="Gym">Gym</option>
           <option value="Work">Work</option>
           <option value="Study">Study</option>
           <option value="custom">Custom</option>
         </select>
-        <input type="text" placeholder="Enter Category" style="display: none;">
-        <input type="date" id="date" placeholder="Select a date">
-        <input type="time" id="time">
-        <select name="importante" id="importante">
+        <!-- <input type="text" placeholder="Enter Category" style="display: none;"  id="" required > -->
+        <input type="date" id="date" placeholder="Select a date" required>
+        <label for="st-time">Start Time</label>
+        <input type="time" id="st-time" required>
+        <label for="st-time">End Time</label>
+        <input type="time" id="end-time" required>
+        <select name="importante" id="importante" required>
           <option value="" disabled selected hidden>Important</option>
           <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="No">No</option>
         </select>
           <button type="submit" id="form-submit">Add Task</button>
       </form>
 
     </div>
-  </section>
-</body>
+  </section> 
+</body> 
 
 </html>

@@ -30,17 +30,19 @@ menu_btn.addEventListener("click", function(e){
 })
 // Close the popover menu when clicking outside of it
 document.addEventListener("click", (e) => {
-    if(!menu_btn.contains(e.target) && !popover_menu.contains(e.target)){
-        popover_menu.classList.remove("show");
-    }
-    if(popover_menu.contains(e.target)){
-        popover_menu.classList.remove("show");
+   
+    
+    const btn = e.target.closest(".menu-of-task-1");
+
+    if(btn){
+        alert("hio")
+
     }
 
-})
+});
 
 const btn_of_edit = document.querySelector(".btn-of-edit");
-const popover_task1 = document.querySelector("#popover-task1");
+const popover_task1 = document.querySelector(".popover-task1");
 
 btn_of_edit.addEventListener("click",(e) =>{
     e.stopPropagation();
@@ -50,12 +52,33 @@ btn_of_edit.addEventListener("click",(e) =>{
 // Close the popover menu when clicking outside of it
 document.addEventListener("click", (e) => {
     if(!btn_of_edit.contains(e.target) && !popover_task1.contains(e.target)){
+        
         popover_task1.classList.remove("show");
     }
-    if(popover_task1.contains(e.target)){
-        popover_task1.classList.remove("show");
-    }
+    // if(popover_task1.contains(e.target)){
+    //     popover_task1.classList.remove("show");
+    // }
+
 });
+
+
+document.addEventListener("click",(e)=>{
+    const btn = e.target.closest(".btn-of-edit");
+    if(btn){
+        
+        const parent =  btn.closest(".menu-of-task-wrapper");
+
+        const menu_container = parent.querySelector(".popover-task1");
+        menu_container.classList.toggle("show");
+
+        
+    }
+    if(!e.target.contains(".popover-task1") && !e.target.contains(".btn-of-edit")){
+            document.querySelector(".popover-task1").classList.remove("show");
+
+    }
+    
+})
 
 const add_task_container = document.querySelector(".add-task");
 const add_task_btn = document.querySelector("#add-task");
